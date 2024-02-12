@@ -65,3 +65,11 @@ const deleteUser = (request, response) => {
     response.status(200).send(`User deleted with ID: ${id}`)
   })
 }
+
+module.exports = {
+  getUsers,
+  getUsersById,
+  createUser,
+  updateUser,
+  deleteUser,
+}
