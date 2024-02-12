@@ -50,5 +50,24 @@ api=>
 ## Create a Table in Postgres
 
 ```sql
+api=>
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(30),
+  email VARCHAR(30)
+);
 
+-- Add data
+INSERT INTO users (name, email)
+  VALUES ('Jerry', 'jerry@example.com'), ('George', 'george@example.com');
+
+api=> INSERT INTO users (name, email)
+  VALUES ('Jerry', 'jerry@example.com'), ('George', 'george@example.com');
+INSERT 0 2
+api=> SELECT * FROM users;
+ id |  name  |       email        
+----+--------+--------------------
+  1 | Jerry  | jerry@example.com
+  2 | George | george@example.com
+(2 rows)
 ```
