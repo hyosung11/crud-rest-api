@@ -71,4 +71,3 @@ api=> SELECT * FROM users;
   2 | George | george@example.com
 (2 rows)
 ```
-
