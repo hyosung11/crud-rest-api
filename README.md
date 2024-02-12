@@ -28,3 +28,27 @@ psql -d postgres -U me
 -- prompt now shoes `postgres=>` meaning we're no longer logged in as a superuser
 postgres=> 
 ```
+
+## Create a Database in Postgres
+
+```sql
+postgres=> CREATE DATABASE api;
+
+-- Use the `list` command to see the available databases:
+ List of databases
+        Name         |      Owner       | Encoding | Collate | Ctype | ICU Locale | Locale Provider |             Access privileges             
+---------------------+------------------+----------+---------+-------+------------+-----------------+-------------------------------------------
+ api                 | me               | UTF8     | C       | C     |            | libc            | 
+ auction             | hyosungbidol-lee | UTF8     | C       | C     |            | libc            | 
+
+-- Connect to the new `api` database with `me` using the `\c` connect command:
+postgres=> \c api
+You are now connected to database "api" as user "me".
+api=>
+```
+
+## Create a Table in Postgres
+
+```sql
+
+```
